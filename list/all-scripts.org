@@ -5,5 +5,5 @@
 ***  Create a simple Obsidian Vault
 
 #+begin_src
-bash -c "$(wget -qLO - https://github.com/infoparticle/useful-scripts/raw/refs/heads/main/scripts/create-obsidian-repo.sh)"
+bash -c "$(curl -sSL https://github.com/infoparticle/useful-scripts/raw/refs/heads/main/scripts/create-obsidian-repo.sh)"""
 #+end_src
