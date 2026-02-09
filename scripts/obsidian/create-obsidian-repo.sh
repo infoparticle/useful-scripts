@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 # Configuration
 URL="https://github.com/infoparticle/useful-scripts/raw/refs/heads/main/resources/obsidian/obsidian-template.zip"
