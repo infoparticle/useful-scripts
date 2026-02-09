@@ -26,6 +26,5 @@ if [ -d "$TEMP_DIR" ]; then
     rm $ZIP_FILE
     echo "Success! Vault created at: ./$VAULT_NAME"
 else
-    # Fallback in case the zip contains files directly instead of a subfolder
-    echo "Check: Did the zip contain a '$TEMP_DIR' folder?"
+    echo "ERR: unzip failed."
 fi
