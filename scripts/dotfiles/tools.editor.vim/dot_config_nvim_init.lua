@@ -1,6 +1,6 @@
 
 -- ==========================================
--- curl -sSL https://raw.githubusercontent.com/infoparticle/useful-scripts/refs/heads/main/scripts/dotfiles/tools.editor.vim/dot_config_nvim.lua
+-- curl -sSL https://github.com/infoparticle/useful-scripts/raw/refs/heads/main/scripts/dotfiles/tools.editor.vim/dot_config_nvim_init.lua
 -- ==========================================
 
 local opt = vim.opt

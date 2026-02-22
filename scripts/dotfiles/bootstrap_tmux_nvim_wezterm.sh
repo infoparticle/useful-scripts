@@ -27,13 +27,16 @@ backup_and_install() {
     # -f fails silently on server errors, -s hides progress bar, -S shows errors, -L follows redirects
     # -o writes directly to the file safely
     curl -fsSL -o "$target_file" "$url"
-    
-    echo "--> Successfully installed $target_file"
+    if [[ $? -eq 0 ]]; then    
+        echo "--> Successfully installed $target_file"
+    else
+        echo "ERROR: curl to fetch $url failed"
+    fi
     echo "----------------------------------------"
 }
 
 # Execute the installations
-backup_and_install "$HOME/.config/nvim/init.lua" "$BASE_URL/tools.editor.vim/dot_config_nvim.lua"
+backup_and_install "$HOME/.config/nvim/init.lua" "$BASE_URL/tools.editor.vim/dot_config_nvim_init.lua"
 backup_and_install "$HOME/.tmux.conf" "$BASE_URL/tools.tmux/dot_tmux.conf"
 backup_and_install "$HOME/.wezterm.lua" "$BASE_URL/tools.terminal/dot_wezterm.lua"
 
