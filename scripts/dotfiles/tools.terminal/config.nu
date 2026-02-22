@@ -1,3 +1,6 @@
+# curl -sSL https://raw.githubusercontent.com/infoparticle/useful-scripts/refs/heads/main/scripts/dotfiles/tools.terminal/config.nu
+#
+
 $env.PROMPT_COMMAND = { || 
     let dir = (pwd)
     $"($dir)\n" 

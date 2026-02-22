@@ -1,6 +1,6 @@
+
 -- ==========================================
--- Modern Minimal init.lua (No Plugins)
--- Enhanced for ps1, bash, java, python
+-- curl -sSL https://raw.githubusercontent.com/infoparticle/useful-scripts/refs/heads/main/scripts/dotfiles/tools.editor.vim/dot_config_nvim.lua
 -- ==========================================
 
 local opt = vim.opt
