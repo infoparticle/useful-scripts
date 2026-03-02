@@ -1,0 +1,85 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$os$username$hostname$directory$git_branch$git_status$python$node$golang$rust
+$character"""
+
+add_newline = false
+
+[os]
+disabled = false
+format = "[$symbol]($style)"
+style = "bold white"
+
+[os.symbols]
+Linux   = "🐧"
+Windows = "🪟"
+Macos   = "🍎"
+
+[username]
+format = "[$user]($style)"
+style_user = "bold cyan"
+style_root = "bold red"
+show_always = true
+
+[hostname]
+format = "[@$hostname]($style)"
+style = "bold cyan"
+ssh_only = false
+trim_at = ""
+
+[directory]
+format = " [󰉋 $path]($style)[$read_only]($read_only_style)"
+style = "bold yellow"
+read_only = " 🔒"
+read_only_style = "red"
+truncation_length = 4
+truncate_to_repo = false
+
+[git_branch]
+format = " [🌿 $branch]($style)"
+style = "bold green"
+symbol = ""
+
+[git_status]
+format = '([ \[$all_status$ahead_behind\]]($style))'
+style = "bold red"
+conflicted = "⚡"
+ahead      = "⬆️ ${count}"
+behind     = "⬇️ ${count}"
+diverged   = "↕️ "
+untracked  = "?"
+modified   = "✏️ "
+staged     = "✅"
+deleted    = "🗑️ "
+
+[python]
+format = " [🐍 $version]($style)"
+style = "bold yellow"
+detect_files = ["*.py", "requirements.txt", "pyproject.toml"]
+
+[golang]
+format = " [🐹 $version]($style)"
+style = "bold cyan"
+detect_files = ["*.go", "go.mod"]
+
+[rust]
+format = " [🦀 $version]($style)"
+style = "bold red"
+detect_files = ["*.rs", "Cargo.toml"]
+
+[nodejs]
+format = " [🟩 $version]($style)"
+style = "bold green"
+detect_files = ["*.js", "package.json"]
+
+[cmd_duration]
+format = " [⏱ $duration]($style)"
+style = "bold yellow"
+min_time = 2_000
+disabled = false
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol   = "[❯](bold red)"
+vimcmd_symbol  = "[❮](bold yellow)"
